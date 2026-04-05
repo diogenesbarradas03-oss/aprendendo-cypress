@@ -14,8 +14,11 @@ describe('OrangeHRM Tests', () => {
   genericField: '.oxd-input--active',
   dateCloseButton: '.--close',
   submitButton: '[type="submit"]',
-  nationalityDropdown: '[tabindex="0"]',
-  nationalityOption: '.oxd-select-dropdown > :nth-child(27)'
+  infoDropdown: '[tabindex="0"]',
+  nationalityOption: '.oxd-select-dropdown > :nth-child(27)',
+  maritalOption: '.oxd-select-dropdown > :nth-child(2)',
+  bloodOption: '.oxd-select-dropdown > :nth-child(6)',
+  genderOption: '.oxd-radio-input'
   }
 
   it.only('User Info Update - Success!', () => {
@@ -33,13 +36,21 @@ describe('OrangeHRM Tests', () => {
     cy.get(selectorsList.genericField).eq(3).clear().type('003', {delay: 190})
     cy.get(selectorsList.genericField).eq(4).clear().type('D200303', {delay: 150})
     cy.get(selectorsList.genericField).eq(5).clear().type('DI0303', {delay: 170})
-    cy.get(selectorsList.genericField).eq(6).clear().type('2033-02-03', {delay: 160})
+    cy.get(selectorsList.genericField).eq(6).clear().type('2033-03-02', {delay: 160})
     cy.get(selectorsList.dateCloseButton).click()
-    cy.get(selectorsList.nationalityDropdown).eq(0).click()
+    cy.get(selectorsList.infoDropdown).eq(0).click()
     cy.get(selectorsList.nationalityOption).click()
+    cy.get(selectorsList.infoDropdown).eq(1).click()
+    cy.get(selectorsList.maritalOption).click()
+    cy.get(selectorsList.genericField).eq(8).clear().type('2003-03-02', {delay: 160})
+    cy.get(selectorsList.dateCloseButton).click()
+    cy.get(selectorsList.genderOption).eq(0).click()
     cy.get(selectorsList.submitButton).eq(0).click()
+    cy.get(selectorsList.infoDropdown).eq(2).click()
+    cy.get(selectorsList.bloodOption).click()
+    cy.get(selectorsList.genericField).eq(9).clear().type('The most common blood type in Brazil', {delay: 150})
     cy.get(selectorsList.submitButton).eq(1).click()
-    cy.get('body').should('contain', 'Successfully Updated')
+    cy.get('body').should('contain', 'Successfully Saved')
     cy.get('.oxd-toast-close')
   })
    it('Login - Failed!', () => {
