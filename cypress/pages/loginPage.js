@@ -19,6 +19,11 @@ class LoginPage {
             cy.get(this.selectorsList().passwordField).type(password, { delay: 100 })
             cy.get(this.selectorsList().loginButton).click()
     }
+
+    CheckWrongCredentialAlert() {
+        const selectors = this.selectorsList();
+            cy.get(this.selectorsList().WrongCredentialAlert).should('be.visible')
+    }
 }    
 
 export default LoginPage;
