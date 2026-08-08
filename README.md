@@ -1,25 +1,30 @@
-# My Cypress Automation
+# 🧪 Aprendendo Cypress
 
-This project utilizes Cypress to automate the testing of alogin feature and a user update feature. Cypress is a JavaScript-based end-to-end testing framework that allows developers to write tests and execute them in real browser.
+Repositório criado durante meus estudos de **Cypress**, com o objetivo de aprender os fundamentos de automação de testes e praticar a criação de cenários automatizados.
 
-## Installation
-```bash
+## 🎯 O que pratiquei
 
-npm install
+* Configuração do Cypress;
+* Criação de testes automatizados;
+* Seleção de elementos;
+* Interação com páginas web;
+* Asserções;
+* Organização de testes;
+* Execução de testes E2E;
+* Uso de comandos do Cypress.
 
-```
->**Note:**
->
-> It´s Necessary to have **node** installed
+## 🛠️ Tecnologias
 
-# Running
-```bash
+* **Cypress**
+* **JavaScript**
+* **Node.js**
 
-# You open the Cypress UI
+## 📚 Sobre
 
-npx cypress open
+Este projeto representa uma etapa inicial da minha jornada em **Quality Assurance e automação de testes**.
 
-# Run the automation by command line
+O objetivo principal foi aprender, experimentar e entender na prática como o Cypress funciona antes de avançar para projetos de testes mais estruturados.
 
-npx cypress run
-```
+### 🔗 Repositório
+
+https://github.com/diogenesbarradas03-oss/aprendendo-cypress
